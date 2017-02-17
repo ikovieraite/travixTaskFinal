@@ -1,0 +1,28 @@
+[{
+  "carrier" : "AA",
+  "basePrice" : 140.00,
+  "tax" : 50.00,
+  "discount" : 10,
+  "departureAirportName" : "LHR",
+  "arrivalAirportName" : "DBX",
+  "departureDay" : 28,
+  "departureMonth" : 8,
+  "departureYear" : 2017,
+  "returnDay" : 31,
+  "returnMonth" : 8,
+  "returnYear" : 2017
+},
+  {
+    "carrier" : "AA",
+    "basePrice" : 140.00,
+    "tax" : 50.00,
+    "discount" : 10,
+    "departureAirportName" : "LHB",
+    "arrivalAirportName" : "DXB",
+    "departureDay" : 28,
+    "departureMonth" : 8,
+    "departureYear" : 2017,
+    "returnDay" : 31,
+    "returnMonth" : 8,
+    "returnYear" : 2017
+  }]
