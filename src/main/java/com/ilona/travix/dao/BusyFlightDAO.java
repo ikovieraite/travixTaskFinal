@@ -25,12 +25,13 @@ public class BusyFlightDAO {
 
     private List<CrazyAirResponse> flightListCrazy;
     private List<ToughJetResponse> flightListTough;
-    private List<BusyFlightsResponse> busyFlightsResponses=new ArrayList<>();
 
     private CrazyAirResponseConverter crazyAirResponseConverter=new CrazyAirResponseConverter();
     private ToughJetResponseConverter toughJetResponseConverter = new ToughJetResponseConverter();
 
     public List<BusyFlightsResponse> getFlights(String origin, String destination, String departureDate, String returnDate, int passengerNumber) throws IOException {
+
+        List<BusyFlightsResponse> busyFlightsResponses=new ArrayList<>();
 
         LocalDateTime departureDateInDateFormat = LocalDateTime.parse(departureDate, DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSX"));
         LocalDateTime ReturnDateInDateFormat = LocalDateTime.parse(returnDate, DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSX"));
