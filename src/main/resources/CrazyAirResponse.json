@@ -1,1 +1,35 @@
-[{"airline" : "airline1", "price": 12.34, "cabinClass" : "E", "departureAirportCode" : "LHB", "destinationAirportCode" : "DBX", "departureDate" : "08-28-2017 00:00:01", "arrivalDate" : "08-31-2017 00:02:00"}, {"airline" : "airlineb", "price": 12.34, "cabinClass" : "E", "departureAirportCode" : "LHR", "destinationAirportCode" : "DBX", "departureDate" : "08-28-2017 00:00:01", "arrivalDate" : "08-31-2017 00:02:00"}]
+[
+  {
+    "airline" : "airline1",
+    "price": 12.34,
+    "cabinClass" : "E",
+    "departureAirportCode" : "LHB",
+    "destinationAirportCode" : "DBX",
+    "departureDate" : "08-28-2017 00:00:01",
+    "arrivalDate" : "08-31-2017 00:02:00"
+  },
+  {
+    "airline" : "airlineb", "price": 12.34,
+    "cabinClass" : "E",
+    "departureAirportCode" : "LHR",
+    "destinationAirportCode" : "DBX",
+    "departureDate" : "08-28-2017 00:00:01",
+    "arrivalDate" : "08-31-2017 00:02:00"
+  },
+  {
+    "airline" : "BA", "price": 1289.00,
+    "cabinClass" : "B",
+    "departureAirportCode" : "LCY",
+    "destinationAirportCode" : "JFK",
+    "departureDate" : "08-28-2017 00:00:01",
+    "arrivalDate" : "08-31-2017 00:02:00"
+  },
+  {
+    "airline" : "AA", "price": 1289.00,
+    "cabinClass" : "B",
+    "departureAirportCode" : "LCY",
+    "destinationAirportCode" : "JFK",
+    "departureDate" : "08-17-2017 00:00:01",
+    "arrivalDate" : "08-26-2017 00:02:00"
+  }
+]
