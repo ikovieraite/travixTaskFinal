@@ -3,6 +3,7 @@ package com.ilona.travix.dao;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.TypeFactory;
 import com.ilona.travix.responses.ToughJetResponse;
+import com.ilona.travix.tools.DateConverter;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,6 +14,8 @@ import java.util.List;
  * Created by ilonaK on 16/02/2017.
  */
 public class ToughJetDAO {
+
+    private DateConverter dateConverter=new DateConverter();
 
     public List<ToughJetResponse> getAllFlights(){
         List<ToughJetResponse> flightList = null;
@@ -33,13 +36,16 @@ public class ToughJetDAO {
         List<ToughJetResponse> relevantFlights=new ArrayList<>();
         List<ToughJetResponse> allFlights=getAllFlights();
         for(ToughJetResponse toughJetResponse : allFlights){
-            String dateOfDeparture=departureMonth+"-"+departureDay+"-"+departureYear;
-            String dateOfReturn=returnMonth+"-"+returnDay+"-"+returnYear;
-            String dateOfDepartureResponse=toughJetResponse.getDepartureMonth()+"-"+toughJetResponse.getDepartureDay()+"-"+toughJetResponse.getDepartureYear();
-            String dateOfReturnResponse=toughJetResponse.getReturnMonth()+"-"+toughJetResponse.getReturnDay()+"-"+toughJetResponse.getReturnYear();
+
+            String dateOfDeparture=dateConverter.getDateFromThreeElements(departureDay, departureMonth, departureYear);
+            String dateOfReturn=dateConverter.getDateFromThreeElements(returnDay, returnMonth, returnYear);
+
+            String dateOfDepartureResponse=dateConverter.getDateFromThreeElements(toughJetResponse.getDepartureDay(), toughJetResponse.getDepartureMonth(), toughJetResponse.getDepartureYear());
+
+            String dateOfReturnResponse=dateConverter.getDateFromThreeElements(toughJetResponse.getReturnDay(), toughJetResponse.getReturnMonth(), toughJetResponse.getReturnYear());
+
             if(toughJetResponse.getDepartureAirportName().equals(origin) && toughJetResponse.getArrivalAirportName().equals(destination) && dateOfDeparture.equals(dateOfDepartureResponse) && dateOfReturn.equals(dateOfReturnResponse) ){
                 relevantFlights.add(toughJetResponse);
-                System.out.println(toughJetResponse);
             }
         }
         return relevantFlights;
